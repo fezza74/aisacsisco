@@ -2,6 +2,8 @@
 /fixtures
 /node_modules
 /playwright-report
+/test-result/
+/test-results
 .dockerignore
 docker-compose.yaml
 Dockerfile
