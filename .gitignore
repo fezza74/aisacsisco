@@ -1,0 +1,7 @@
+/data
+/fixtures
+/node_modules
+/playwright-report
+.dockerignore
+docker-compose.yaml
+Dockerfile

@@ -1,0 +1,29 @@
+{
+  "name": "aisacsisco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rm -rf test-result && mkdir -p test-result",
+    "generate:report": "npx ts-node tests/helpers/reportGenerate.ts",
+    "copy": "npm install && .\\node_modules\\.bin\\playwright.cmd install --force && npm run clean:reports",
+    "pretest": "npm run clean:reports",
+    "posttest": "npm run generate:report",
+    "execute:script": "npx cucumber-js test",
+    "test": "npm run execute:script || npm run posttest",
+    "failed:script": "cucumber-js -p rerun @rerun.txt",
+    "test:failed": "npm run failed:script || npm run generate:report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4",
+    "mkdirp": "^3.0.1",
+    "multiple-cucumber-html-reporter": "^3.8.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2"
+  }
+}
