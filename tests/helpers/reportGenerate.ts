@@ -3,7 +3,7 @@ const report = require("multiple-cucumber-html-reporter");
 report.generate({
   jsonDir: "./test-result/report/",
   reportPath: "./test-result/report/",
-  openReportInBrowser: false,
+  openReportInBrowser: true,
   pageTitle: "AI.SAC.SI.SCO TEST",
   reportName: "AI.SAC.SI.SCO-REPORT",
   displayReportTime: true,
