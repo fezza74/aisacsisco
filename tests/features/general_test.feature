@@ -6,4 +6,4 @@ Scenario Outline: Visibility of headers
     
 Examples:
 |email               | phone            |
-|info@aisacsisco.eu  | +39 3395758078   |
+|ccinfo@aisacsisco.eu  | +39 3395758078   |
